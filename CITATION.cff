@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use or discuss this work, please cite it using the metadata below."
+title: "Ramanujan, Landen, and Baker N-Series Refinement: Higher-Degree Modular Gap Laws and a Two-Axis Comparison"
+type: article
+authors:
+  - family-names: Baker
+    given-names: Wayne
+date-released: 2026-07-13
+version: preprint-v1
+repository-code: "https://github.com/CWBaker360/ramanujan-landen-nseries-refinement"
+url: "https://github.com/CWBaker360/ramanujan-landen-nseries-refinement"
+abstract: >-
+  This paper compares Ramanujan ellipse approximation, fixed N-series
+  resolution cancellation, and Landen modular gap contraction. It proves the
+  first-correction law delta(q^m)/delta(q)^m = 4^(1-m)(1 + 4m q^2 + O(q^4))
+  for every fixed integer m at least two, derives the AGM linkage constant
+  alpha_n/delta_n^2 tending to one eighth, and gives a guarded comparison with
+  a companion cubic trisection error cascade.
+keywords:
+  - Ramanujan approximation
+  - Landen transformation
+  - elliptic nome
+  - modular lambda function
+  - arithmetic-geometric mean
+  - N-series
+  - asymptotic analysis
+  - numerical verification
+license: proprietary
