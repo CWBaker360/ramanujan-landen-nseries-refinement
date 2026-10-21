@@ -97,3 +97,13 @@ which approach \(1/8\) and \(1/2\), respectively.
 ## Interpretation
 
 The numerical outputs illustrate the asymptotic laws and check the implementation. The higher-degree modular gap law is proved analytically in the paper from the small-nome theta-function expansion. The AGM linkage uses the cited classical error asymptotic.
+
+## Stability and convergence sweep
+
+The theta-function gap is evaluated using the rationalized identity
+
+\[\delta(q)=\lambda(q)/(1+\sqrt{1-\lambda(q)})^2.\]
+
+The default run additionally writes `outputs/modular_gap_sweep.csv` for
+`q=1e-6, 1e-9, 1e-12` and degrees 2 through 6. This supplements but does not
+replace the analytic proof.
