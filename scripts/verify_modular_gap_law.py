@@ -64,6 +64,8 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Write outputs without enforcing the built-in numerical checks.",
     )
+    parser.add_argument("--q-sweep", nargs="*", default=["1e-6", "1e-9", "1e-12"],
+                        help="Nomes for convergence diagnostics.")
     return parser.parse_args()
 
 
@@ -77,7 +79,8 @@ def modular_delta(q: mp.mpf) -> mp.mpf:
     theta3 = mp.jtheta(3, 0, q)
     lam = (theta2 / theta3) ** 4
     k_prime = mp.sqrt(1 - lam)
-    return (1 - k_prime) / (1 + k_prime)
+    # Rationalization avoids cancellation for k_prime close to one.
+    return lam / (1 + k_prime) ** 2
 
 
 def modular_rows(q: mp.mpf, degrees: Iterable[int]) -> list[dict[str, object]]:
@@ -261,14 +264,23 @@ def main() -> None:
     degrees = range(args.m_min, args.m_max + 1)
 
     modular = modular_rows(q, degrees)
+    sweep = [modular_rows(mp.mpf(qv), range(args.m_min, args.m_max + 1)) for qv in args.q_sweep]
     agm = agm_rows(args.agm_rows)
 
     if not args.skip_checks:
         run_checks(q, modular, agm)
+        for nome, rows in zip(args.q_sweep, sweep):
+            qq = mp.mpf(nome)
+            if not (mp.mpf('0') < qq < 1):
+                raise ValueError('Sweep nomes must satisfy 0 < q < 1')
+            for row in rows:
+                if abs(row['ratio_error']) > 100 * qq**2 or abs(row['correction_error']) > 1000 * qq**2:
+                    raise AssertionError(f'Modular sweep failed for q={nome}, m={row["m"]}')
 
     args.outdir.mkdir(parents=True, exist_ok=True)
     write_modular_csv(args.outdir / "modular_gap_law.csv", modular)
     write_agm_csv(args.outdir / "agm_linkage_law.csv", agm)
+    write_modular_csv(args.outdir / "modular_gap_sweep.csv", [row for group in sweep for row in group])
     write_summary(
         args.outdir / "verification_summary.txt",
         args.precision,
