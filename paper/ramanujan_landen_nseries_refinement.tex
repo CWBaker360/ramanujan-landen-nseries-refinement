@@ -15,14 +15,14 @@
 \title{Ramanujan, Landen, and Baker N-Series Refinement:\\
 Higher-Degree Modular Gap Laws and a Two-Axis Comparison}
 \author{Wayne Baker}
-\date{June 2026}
+\date{Original: June 2026\\Revised: October 21, 2026}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-We compare two refinement mechanisms that arise in elliptic perimeter
+We distinguish refinement mechanisms that arise in elliptic perimeter
 approximation and geometric acceleration. Ramanujan's second approximation to
 the ellipse perimeter acts along the eccentricity axis and reproduces the
 Gauss--Kummer expansion through order $h^4$. The geometric N-series acts along a
@@ -119,10 +119,12 @@ normalized gap lies directly on the modulus axis. Let
 \[
 \delta_n=\frac{a_n-b_n}{a_n+b_n}
 \]
-be the normalized gap of the arithmetic--geometric mean iteration. A direct
-calculation gives the local Landen contraction
+be the normalized gap of the arithmetic--geometric mean iteration. The AGM updates
+$a_{n+1}=(a_n+b_n)/2$ and $b_{n+1}=\sqrt{a_nb_n}$ yield the exact identity
 \[
-\delta_{n+1}\sim\frac14\delta_n^2.
+\delta_{n+1}=\frac{1-\sqrt{1-\delta_n^2}}{1+\sqrt{1-\delta_n^2}}
+=\frac{\delta_n^2}{(1+\sqrt{1-\delta_n^2})^2}
+=\frac14\delta_n^2+O(\delta_n^4).
 \]
 The map $\delta_n\mapsto\delta_{n+1}$ is the descending Landen transformation of
 the elliptic modulus~\cite{lawden1989}. The constant $1/4$ is therefore not an
@@ -332,6 +334,9 @@ correction, by a simple linear-in-$m$ law.
 
 \section{Numerical illustration of the higher-degree law}
 
+The big-$O$ constants may depend on each fixed $m$; the proposition is not
+asserted uniformly as $m\to\infty$.
+
 The proposition proves the higher-degree modular gap law for every fixed integer
 $m\ge 2$. We record the high-precision computations that illustrate the
 convergence. For fixed $m\ge 2$, define
@@ -344,7 +349,7 @@ ratios for $m=2,\dots,6$ round to the predicted limiting constants:
 \begin{center}
 \begin{tabular}{ccc}
 \toprule
-$m$ & $4^{1-m}$ & observed limiting value \\
+$m$ & $4^{1-m}$ & $R_m(10^{-12})$ (rounded) \\
 \midrule
 2 & $1/4$    & $0.25$ \\
 3 & $1/16$   & $0.0625$ \\
@@ -372,7 +377,7 @@ are
 \begin{center}
 \begin{tabular}{ccc}
 \toprule
-$m$ & $4m$ & observed limiting value \\
+$m$ & $4m$ & $C_m(10^{-12})$ \\
 \midrule
 2 & 8  & $8.000000000000000000000016$ \\
 3 & 12 & $12.000000000000000000000054$ \\
@@ -497,8 +502,8 @@ normalized cubic residual law. The three mechanisms should therefore be read as
 distinct but comparable: N-series refinement is Richardson-type cancellation on
 the resolution axis, Landen refinement is modular contraction on the gap axis,
 and the trisection cascade is nonlinear geometric contraction on the
-angular-error axis. Whether fixed $m$-scale N-series operators admit a deeper
-modular interpretation remains open; no such identification is assumed here.
+angular-error axis. Whether a deeper formal connection exists is not established here; no such
+identification is assumed.
 
 \appendix
 
@@ -591,7 +596,7 @@ $\pi$}, preprint, 2026.
 \bibitem{BakerAGM2026}
 W.~Baker,
 \emph{A Prefactor Coefficient Law for the Gauss--Legendre AGM Algorithm},
-preprint, 2026.
+2026. \url{https://doi.org/10.5281/zenodo.22896047}.
 
 \bibitem{BakerCascade2026}
 W.~Baker,
