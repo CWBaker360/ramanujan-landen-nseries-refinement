@@ -80,6 +80,16 @@ The comparison is structural, not identificational:
 
 The paper does **not** claim that fixed N-series extrapolation or the trisection cascade is a modular transformation.
 
+## Publication and scope
+
+This remains a **private revised working preprint**. The fixed-degree first-correction
+coefficient follows from the classical theta expansion; its use here is a careful
+comparison with different resolution and geometric trisection error mechanisms.
+No common operator, conjugacy or new modular transformation is claimed.
+
+The updated TeX and verification script are the current working files. The PDF
+predates these edits and requires rebuilding before public release.
+
 ## Numerical verification
 
 The script
@@ -102,6 +112,7 @@ The script writes:
 outputs/modular_gap_law.csv
 outputs/agm_linkage_law.csv
 outputs/verification_summary.txt
+outputs/modular_gap_sweep.csv
 ```
 
 ## Related repositories
