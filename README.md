@@ -2,7 +2,7 @@
 
 **Subtitle:** Higher-Degree Modular Gap Laws and a Two-Axis Comparison  
 **Author:** Wayne Baker  
-**Date:** June 2026  
+**Date:** Original June 2026; revised October 21, 2026  
 **Status:** Preprint / source and reproducibility archive
 
 This repository contains the paper, LaTeX source, and numerical verification script for:
@@ -82,13 +82,16 @@ The paper does **not** claim that fixed N-series extrapolation or the trisection
 
 ## Publication and scope
 
-This remains a **private revised working preprint**. The fixed-degree first-correction
+This is a **verified revised preprint currently held in a private repository**. The fixed-degree first-correction
 coefficient follows from the classical theta expansion; its use here is a careful
 comparison with different resolution and geometric trisection error mechanisms.
 No common operator, conjugacy or new modular transformation is claimed.
 
-The updated TeX and verification script are the current working files. The PDF
-predates these edits and requires rebuilding before public release.
+The current TeX and the rebuilt nine-page PDF are paired in the `paper/` folder.
+The exact committed verification script passed GitHub Actions at 400-digit
+precision, with downloadable CSV artifacts:
+[successful verification run](https://github.com/CWBaker360/ramanujan-landen-nseries-refinement/actions/runs/39671843702).
+The paper remains a preprint and has not been independently peer-reviewed.
 
 ## Numerical verification
 
@@ -132,7 +135,7 @@ outputs/modular_gap_sweep.csv
 ├── LICENSE_NOTICE.md
 ├── CHANGELOG.md
 ├── SHA256SUMS.txt
-├── .gitignore
+├── .github/workflows/verify-numerics.yml
 ├── paper/
 │   ├── ramanujan_landen_nseries_refinement.tex
 │   ├── ramanujan_landen_nseries_refinement.pdf
@@ -143,7 +146,8 @@ outputs/modular_gap_sweep.csv
 └── docs/
     ├── abstract.md
     ├── repository_description.md
-    └── github_upload_checklist.md
+    ├── github_upload_checklist.md
+    └── release_verification_2026-10-21.md
 ```
 
 ## Rights
