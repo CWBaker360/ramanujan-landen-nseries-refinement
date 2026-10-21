@@ -1,3 +1,12 @@
+## Working revision — 2026-10-21 (not yet released)
+
+- Reframed the higher-degree first-correction term as a direct consequence of classical theta expansions, without a novelty or priority claim.
+- Specified q=1e-12 and 400-digit working precision behind the displayed modular tables.
+- Rationalized the numerical delta evaluation to avoid subtractive cancellation.
+- Added a multi-nome convergence sweep and CSV export to the verification script.
+- Clarified that the checked-in PDF and SHA256SUMS remain the earlier preprint-v1 artifacts pending regeneration and a full regression run.
+- Repository remains private pending release review.
+
 # Changelog
 
 ## preprint-v1 — 2026-07-13
