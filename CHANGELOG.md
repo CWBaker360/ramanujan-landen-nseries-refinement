@@ -1,5 +1,10 @@
 ## Working revision — 2026-10-21 (not yet released)
 
+- Exact AGM recurrence added to the TeX, including its rationalized form and quadratic asymptotic.
+- Specified that the modular remainder statement is for fixed degree (no uniform-in-degree claim).
+- Added the verified AGM companion DOI `10.5281/zenodo.22896047`.
+- Revised manuscript source committed; PDF replacement and checksum regeneration still pending.
+
 - Reframed the higher-degree first-correction term as a direct consequence of classical theta expansions, without a novelty or priority claim.
 - Specified q=1e-12 and 400-digit working precision behind the displayed modular tables.
 - Rationalized the numerical delta evaluation to avoid subtractive cancellation.
