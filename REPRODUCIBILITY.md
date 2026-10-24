@@ -107,3 +107,7 @@ The theta-function gap is evaluated using the rationalized identity
 The default run additionally writes `outputs/modular_gap_sweep.csv` for
 `q=1e-6, 1e-9, 1e-12` and degrees 2 through 6. This supplements but does not
 replace the analytic proof.
+
+## Checksum manifest status (2026-10-24)
+
+`SHA256SUMS.txt` predates subsequent README and citation-metadata edits, and must not be treated as a verified manifest of the current repository checkout. The verification commands above refer to the currently checked-in scripts, not to the pending revised manuscripts. The existing manifest is preserved as an earlier snapshot; regenerate and validate a complete manifest against the exact release commit before declaring repository-wide SHA-256 verification successful. Do not replace manuscript PDFs, source files, or scientific output merely to make a checksum match.
