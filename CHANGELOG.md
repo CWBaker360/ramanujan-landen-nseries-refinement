@@ -1,4 +1,14 @@
-## Working revision — 2026-10-21 (not yet released)
+# Changelog
+
+## v1.2 — 2026-10-24
+
+- Published revised LaTeX and PDF manuscript pair.
+- Clarified fixed-degree modular gap asymptotics and AGM connection.
+- Updated numerical provenance and disclosure notes.
+- Earlier manuscript preserved by `pre-v1.2-backup` Git tag.
+- No claim of independent PDF rebuild certification is made.
+
+## Development notes — 2026-10-21 (superseded by v1.2)
 
 - Exact AGM recurrence added to the TeX, including its rationalized form and quadratic asymptotic.
 - Specified that the modular remainder statement is for fixed degree (no uniform-in-degree claim).
@@ -10,7 +20,7 @@
 - Rationalized the numerical delta evaluation to avoid subtractive cancellation.
 - Added a multi-nome convergence sweep and CSV export to the verification script.
 - Clarified that the checked-in PDF and SHA256SUMS remain the earlier preprint-v1 artifacts pending regeneration and a full regression run.
-- Repository remains private pending release review.
+- Repository was made public on 2026-10-24; this historical note is superseded.
 
 # Changelog
 
