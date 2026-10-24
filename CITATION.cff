@@ -5,8 +5,8 @@ type: article
 authors:
   - family-names: Baker
     given-names: Wayne
-date-released: 2026-07-13
-version: preprint-v1
+date-released: 2026-10-24
+version: v1.2
 repository-code: "https://github.com/CWBaker360/ramanujan-landen-nseries-refinement"
 url: "https://github.com/CWBaker360/ramanujan-landen-nseries-refinement"
 abstract: >-
